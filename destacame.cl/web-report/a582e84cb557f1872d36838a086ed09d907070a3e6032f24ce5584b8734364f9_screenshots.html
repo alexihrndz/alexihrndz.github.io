@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Destacame Challenge Automation Web pcfactory</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="3be9238c3e89a8e2ce8255ba15e8c9322b344381e87acfd3e4bd5783647856ed.html">Compra De Articulos En PC Factory</a></span>
+                > <span class="truncate-60"><a
+                    href="a582e84cb557f1872d36838a086ed09d907070a3e6032f24ce5584b8734364f9.html">Compra en PC Factory </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 08-03-2023 18:49</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Compra De Articulos En PC Factory </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como gamer<br />
+Quiero comprar un computador<br />
+Para poder jugar en línea
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="d1754026cfbd280f508fb6bbf5ae4d8ec77c78f92bb13d0f5d7b9fedfeff0342.html">Compraspcfactory
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="29e2b3d0804acaf62cefc5d624c95fb7a84b8d79d56f63d9d5256062a70f8adc.html">Compra1
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Compra en PC Factory
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="3876714d20a1e99554496c49aaa42944697c0b852b586d73a23224d8605dd33c.png" title=" Dado que Gamer ingreso a la pagina http://www.pcfactory.cl/" width="1925"/>
+                <img src="3876714d20a1e99554496c49aaa42944697c0b852b586d73a23224d8605dd33c.png" title=" Gamer opens the http://www.pcfactory.cl/" width="1925"/>
+                <img src="3876714d20a1e99554496c49aaa42944697c0b852b586d73a23224d8605dd33c.png" title=" Dado que Gamer ingreso a la pagina http://www.pcfactory.cl/ (completed)" width="1925"/>
+                <img src="a73f6edc2d5c04d0fa87601df30561f7c4ff8eff36d3f58b746d27fa6101d17f.png" title=" Cuando el busca el producto por descripcion y lo agrega al carrito
+| descripcion |
+| Notebook Gamer Nitro 5 Intel i5-11400H NVIDIA GTX 1650 15.6&quot; FHD 144Hz 16GB RAM 512GB SSD Windows 11 |
+| iPhone 11 128GB - Blanco |" width="1925"/>
+                <img src="a73f6edc2d5c04d0fa87601df30561f7c4ff8eff36d3f58b746d27fa6101d17f.png" title=" Gamer buscar y agregar" width="1925"/>
+                <img src="a73f6edc2d5c04d0fa87601df30561f7c4ff8eff36d3f58b746d27fa6101d17f.png" title=" Gamer buscar producto" width="1925"/>
+                <img src="a73f6edc2d5c04d0fa87601df30561f7c4ff8eff36d3f58b746d27fa6101d17f.png" title=" Gamer enters 'Notebook Gamer Nitro 5 Intel i5-11400H NVIDIA GTX 1650 15.6&quot; FHD 144Hz 16GB RAM 512GB SSD Windows 11' then hits [ENTER] into Input buscar aqui" width="1925"/>
+                <img src="5fc95a93aa8e017335101042cf791e8e16bfc8173725e05cc9a9d51aafa3e15d.png" title=" Gamer buscar producto (completed)" width="1925"/>
+                <img src="99c9337628453f922157ee0f951aa85c3597d71729fe841cc2ac393d87eb4830.png" title=" Gamer agregar producto" width="1925"/>
+                <img src="99c9337628453f922157ee0f951aa85c3597d71729fe841cc2ac393d87eb4830.png" title=" Gamer clicks on Boton agregar al carrito en el producto" width="1925"/>
+                <img src="ad76e33110fbe6f6048afe5fc4c52de42b3cd065599620a3fab7d4ec9982043b.png" title=" Gamer should see Titulo de agregado al carrito with text value that contains: &lt;[&iexcl;Felicidades! Agregaste]&gt;" width="1925"/>
+                <img src="ad76e33110fbe6f6048afe5fc4c52de42b3cd065599620a3fab7d4ec9982043b.png" title=" Gamer should see Titulo de agregado al carrito with text value that contains: &lt;[Notebook Gamer Nitro 5 Intel i5-11400H NVIDIA GTX 1650 15.6&quot; FHD 144Hz 16GB RAM 512GB SSD Windows 11]&gt;" width="1925"/>
+                <img src="f7c0eeddf4afb4a570d30310d3530b156918151f13ab3c1ab646b293f62bb495.png" title=" Gamer should see Titulo de agregado al carrito with text value that contains: &lt;[a tu carro]&gt;" width="1925"/>
+                <img src="f7c0eeddf4afb4a570d30310d3530b156918151f13ab3c1ab646b293f62bb495.png" title=" Gamer agregar producto (completed)" width="1925"/>
+                <img src="503088478e582a2d5cb4b064ece3e626686732f0f513045d76bd28829e601a3b.png" title=" Gamer clicks on Boton seguir comprando" width="1925"/>
+                <img src="1808d437ef7ad499a5b8c721568e0881a1bad1eaf9fefbf5cee87f483446bebf.png" title=" Gamer buscar producto" width="1925"/>
+                <img src="1808d437ef7ad499a5b8c721568e0881a1bad1eaf9fefbf5cee87f483446bebf.png" title=" Gamer enters 'iPhone 11 128GB - Blanco' then hits [ENTER] into Input buscar aqui" width="1925"/>
+                <img src="34d60c0cd6aa204010ffac92a7981c7280afcef9018ff6b48df41e7dad6a3a69.png" title=" Gamer buscar producto (completed)" width="1925"/>
+                <img src="ed06d0446ac7ef8a36f7b077e3f07603fd000a6ab5295f828c08e27c1f0165b4.png" title=" Gamer agregar producto" width="1925"/>
+                <img src="ed06d0446ac7ef8a36f7b077e3f07603fd000a6ab5295f828c08e27c1f0165b4.png" title=" Gamer clicks on Boton agregar al carrito en el producto" width="1925"/>
+                <img src="3d252baedff12bbae2765c41621caad64ce2de4da7d6a798b424c42bb3cdcb4a.png" title=" Gamer should see Titulo de agregado al carrito with text value that contains: &lt;[&iexcl;Felicidades! Agregaste]&gt;" width="1925"/>
+                <img src="3d252baedff12bbae2765c41621caad64ce2de4da7d6a798b424c42bb3cdcb4a.png" title=" Gamer should see Titulo de agregado al carrito with text value that contains: &lt;[iPhone 11 128GB - Blanco]&gt;" width="1925"/>
+                <img src="05f98a30145460adb8f98c50b99ff7785356c53e964a803cbafea88f860fcf0f.png" title=" Gamer agregar producto" width="1925"/>
+                <img src="05f98a30145460adb8f98c50b99ff7785356c53e964a803cbafea88f860fcf0f.png" title=" Gamer should see Titulo de agregado al carrito with text value that contains: &lt;[a tu carro]&gt;" width="1925"/>
+                <img src="d6d6bf3644c75d65995392d40575cabe4313533d0e06207b9d9994cd4ce71c9e.png" title=" Gamer buscar y agregar" width="1925"/>
+                <img src="d6d6bf3644c75d65995392d40575cabe4313533d0e06207b9d9994cd4ce71c9e.png" title=" Gamer clicks on Boton seguir comprando" width="1925"/>
+                <img src="d6d6bf3644c75d65995392d40575cabe4313533d0e06207b9d9994cd4ce71c9e.png" title=" Cuando el busca el producto por descripcion y lo agrega al carrito
+| descripcion |
+| Notebook Gamer Nitro 5 Intel i5-11400H NVIDIA GTX 1650 15.6&quot; FHD 144Hz 16GB RAM 512GB SSD Windows 11 |
+| iPhone 11 128GB - Blanco | (completed)" width="1925"/>
+                <img src="b6cc23e7db63283c0c823d9ed04c25f988bccd79e4b5eb8bd5c1ce46de86a430.png" title=" Cuando el continua la compra con la opcion de recoger en la tienda: La Serena" width="1925"/>
+                <img src="b6cc23e7db63283c0c823d9ed04c25f988bccd79e4b5eb8bd5c1ce46de86a430.png" title=" Gamer seleccionar pagar como invitado" width="1925"/>
+                <img src="b6cc23e7db63283c0c823d9ed04c25f988bccd79e4b5eb8bd5c1ce46de86a430.png" title=" Gamer clicks on Boton ir al carrito" width="1925"/>
+                <img src="51709701c33f102188480b6ee798f17f123605af75b4ab3f6f44793c67e352c9.png" title=" Gamer clicks on Btn ir al carrito en resumen" width="1925"/>
+                <img src="eda3a9e2a951e662d611e7a2a6402d4202952ee4cac6e52e4cbb29e9b20c9515.png" title=" Gamer clicks on Boton ir a pagar" width="1925"/>
+                <img src="36e956d86f10114d0ed995178d57e7f590c6867fa52c45199efd25ae55a06ec4.png" title=" Gamer clicks on Boton seguir como invitado" width="1925"/>
+                <img src="36e956d86f10114d0ed995178d57e7f590c6867fa52c45199efd25ae55a06ec4.png" title=" Gamer seleccionar pagar como invitado (completed)" width="1925"/>
+                <img src="836bdebdcb2a45ea148ac52c849da5201f907a23c7f5a44070a688240b79b4e1.png" title=" Gamer seleccionar tipo entrega" width="1925"/>
+                <img src="836bdebdcb2a45ea148ac52c849da5201f907a23c7f5a44070a688240b79b4e1.png" title=" Gamer clicks on Opcion retiro en tienda" width="1925"/>
+                <img src="e92c82bd4f9bc36aee334a34482d19b1b2768e70cb82789dd98cf68fdd22fb79.png" title=" Gamer clicks on Lista tiendas" width="1925"/>
+                <img src="583637f8cdaf4a5c22f6eb92dcea7baae911aee55bc21238d2641c0f65054998.png" title=" Gamer clicks on Opc tienda La Serena" width="1925"/>
+                <img src="583637f8cdaf4a5c22f6eb92dcea7baae911aee55bc21238d2641c0f65054998.png" title=" Gamer seleccionar tipo entrega (completed)" width="1925"/>
+                <img src="583637f8cdaf4a5c22f6eb92dcea7baae911aee55bc21238d2641c0f65054998.png" title=" Cuando el continua la compra con la opcion de recoger en la tienda: La Serena (completed)" width="1925"/>
+                <img src="ad603013933a5a264864ec11bf92edafa0f972913097f87979f19a5b54a625d9.png" title=" Entonces verifica que la direccion de la tienda es: Arturo Prat 620, LA SERENA, La Serena" width="1925"/>
+                <img src="ad603013933a5a264864ec11bf92edafa0f972913097f87979f19a5b54a625d9.png" title=" Gamer should see Direccion de la tienda with text value that contains (ignoring case): &lt;[Arturo Prat 620, LA SERENA, La Serena]&gt;" width="1925"/>
+                <img src="ad603013933a5a264864ec11bf92edafa0f972913097f87979f19a5b54a625d9.png" title=" Entonces verifica que la direccion de la tienda es: Arturo Prat 620, LA SERENA, La Serena (completed)" width="1925"/>
+                <img src="6b1de0f8ccb0f8c043bcf42a1fda085a6b492255a75b8813e4044526dea34bdc.png" title=" Y termina la compra" width="1925"/>
+                <img src="6b1de0f8ccb0f8c043bcf42a1fda085a6b492255a75b8813e4044526dea34bdc.png" title=" Gamer continuar compra" width="1925"/>
+                <img src="6b1de0f8ccb0f8c043bcf42a1fda085a6b492255a75b8813e4044526dea34bdc.png" title=" Gamer cambiar tienda retiro" width="1925"/>
+                <img src="6b1de0f8ccb0f8c043bcf42a1fda085a6b492255a75b8813e4044526dea34bdc.png" title=" Gamer clicks on Lista tiendas" width="1925"/>
+                <img src="b51bb5ec37c34be98027dee19365455ee8baad4af1749ba562bfd3bfec03800b.png" title=" Gamer clicks on Opc tienda Antofagasta" width="1925"/>
+                <img src="b51bb5ec37c34be98027dee19365455ee8baad4af1749ba562bfd3bfec03800b.png" title=" Gamer cambiar tienda retiro (completed)" width="1925"/>
+                <img src="24e8878fd8551d15174d19816f2928e4425f7b9ff60dd42eac2bc2c956bb2770.png" title=" Gamer clicks on Boton continuar compra" width="1925"/>
+                <img src="4af7354d0b3be64f282e0444c27b979bb775f6c0d9bf80e7c2d3b3f351d5a5c1.png" title=" Gamer should see Titulo documento that is displayed" width="1925"/>
+                <img src="4af7354d0b3be64f282e0444c27b979bb775f6c0d9bf80e7c2d3b3f351d5a5c1.png" title=" Gamer continuar compra (completed)" width="1925"/>
+                <img src="4af7354d0b3be64f282e0444c27b979bb775f6c0d9bf80e7c2d3b3f351d5a5c1.png" title=" Y termina la compra (completed): <span class='success-color'>SUCCESS</span>" width="1925"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.0</span>
+</div>
+</body>
+</html>
