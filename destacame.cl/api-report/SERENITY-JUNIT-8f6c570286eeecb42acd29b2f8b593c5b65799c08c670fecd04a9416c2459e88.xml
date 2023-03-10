@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Pruebas de servicios Rest" skipped="0" tests="3" time="7.38" timestamp="2023-03-09 08:42:30"><testcase name="Crear mascotas en petstore"/><testcase name="Consultar mascotas en petstore"/><testcase name="Actualiza datos de mascotas en petstore"/></testsuite>
